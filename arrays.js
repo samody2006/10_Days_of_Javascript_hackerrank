@@ -6,9 +6,9 @@
 function getSecondLargest(nums) {
     // Complete the function
     const sortedArray = nums.sort((x, y) => x - y);
-    const unique_sortedArray = sortedArray.filter((element, index, self) => {
-        return index === self.indexOf(element)
+    const sortedUniqueArray = sortedArray.filter((element, index, self) => {
+        return index === self.indexOf(element);
     });
 
-    return unique_sortedArray[unique_sortedArray.length - 2];
+    return sortedUniqueArray[unique_sortedArray.length - 2];
 }
