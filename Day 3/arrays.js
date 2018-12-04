@@ -1,14 +1,14 @@
 /**
- *   Return the second largest number in the array.
- *   @param {Number[]} nums - An array of numbers.
- *   @return {Number} The second largest number in the array.
- **/
+*   Return the second largest number in the array.
+*   @param {Number[]} nums - An array of numbers.
+*   @return {Number} The second largest number in the array.
+**/
 function getSecondLargest(nums) {
     // Complete the function
-    const sortedArray = nums.sort((x, y) => x - y);
-    const sortedUniqueArray = sortedArray.filter((element, index, self) => {
-        return index === self.indexOf(element);
-    });
+    var sorted_array = nums.sort(function (a,b) {return a - b;});
+    var unique_sorted_array = sorted_array.filter(function(elem, index, self) {
+        return index === self.indexOf(elem);
+    })
 
-    return sortedUniqueArray[unique_sortedArray.length - 2];
+    return unique_sorted_array[unique_sorted_array.length - 2];
 }
